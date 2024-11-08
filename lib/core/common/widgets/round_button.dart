@@ -12,7 +12,7 @@ class RoundButton extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: AppColors.light,
+          backgroundColor: AppColors.white,
           minimumSize: Size(
             size.width * .9,
             size.height * .06,

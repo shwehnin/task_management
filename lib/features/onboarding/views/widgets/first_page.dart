@@ -6,7 +6,6 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../../core/common/widgets/fading_text.dart';
 import '../../../../core/common/widgets/white_space.dart';
 
-
 class FirstPage extends StatelessWidget {
   const FirstPage({super.key});
 
@@ -23,7 +22,7 @@ class FirstPage extends StatelessWidget {
             'Todo with Riverpod',
             fontSize: 30,
             fontWeight: FontWeight.w500,
-            color: AppColors.light,
+            color: AppColors.white,
             textAlign: TextAlign.center,
           ),
           const WhiteSpace(height: 10),

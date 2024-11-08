@@ -29,7 +29,7 @@ class FadingText extends StatelessWidget {
       style: GoogleFonts.poppins(
         fontSize: fontSize,
         fontWeight: fontWeight ?? FontWeight.normal,
-        color: color ?? AppColors.light,
+        color: color ?? AppColors.white,
       ),
     );
   }

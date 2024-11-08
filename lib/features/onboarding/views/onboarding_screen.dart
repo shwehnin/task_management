@@ -1,7 +1,4 @@
-import 'package:lottie/lottie.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:task_management/core/res/image_res.dart';
 import 'package:task_management/core/res/app_colors.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -29,7 +26,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.darkBackground,
       body: SafeArea(
         child: Stack(
           alignment: Alignment.bottomCenter,
@@ -56,7 +52,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         Icon(
                           Ionicons.chevron_forward_circle,
                           size: 30,
-                          color: AppColors.light,
+                          color: AppColors.white,
                         ),
                         WhiteSpace(
                           width: 5,
@@ -76,7 +72,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       dotHeight: 12,
                       spacing: 10,
                       dotColor: AppColors.yellow.withOpacity(.5),
-                      activeDotColor: AppColors.light,
+                      activeDotColor: AppColors.white,
                     ),
                   )
                 ],
