@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:task_management/core/res/app_colors.dart';
 
 class CustomButton extends StatelessWidget {
@@ -43,12 +44,16 @@ class CustomButton extends StatelessWidget {
         child: Center(
           child: Text(
             label,
-            style: TextStyle(
+            style: GoogleFonts.acme(
+              textStyle: TextStyle(
+                fontSize: 18,
                 color: isClose == true
                     ? Get.isDarkMode
                         ? Colors.white
                         : Colors.grey[600]
-                    : AppColors.white),
+                    : AppColors.white,
+              ),
+            ),
           ),
         ),
       ),
