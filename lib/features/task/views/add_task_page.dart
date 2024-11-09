@@ -165,6 +165,9 @@ class _AddTaskPageState extends State<AddTaskPage> {
                 children: [
                   _colorPallete(),
                   CustomButton(
+                      color: AppColors.bluish,
+                      width: 100,
+                      height: 60,
                       label: "Create Task",
                       onTap: () {
                         _validateData();
@@ -223,7 +226,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
 
   _getTimeFromUser({required bool isStartTime}) async {
     var pickedTime = await _showTimePicker();
-    String _formattedTime = pickedTime.format(context);
+    String _formattedTime = pickedTime.format(context).trim();
     if (pickedTime == null) {
       print("Time Cancel");
     } else if (isStartTime == true) {
@@ -238,12 +241,15 @@ class _AddTaskPageState extends State<AddTaskPage> {
   }
 
   _showTimePicker() {
+    // int hour = int.parse(_startTime.split(":")[0]);
+    // int minute = int.parse(_startTime.split(":")[1].split(" ")[0]);
+    List<String> timeParts = _startTime.trim().split(" ");
+    int hour = int.parse(timeParts[0].split(":")[0]);
+    int minute = int.parse(timeParts[0].split(":")[1]);
     return showTimePicker(
       // initialEntryMode: TimePickerEntryMode.input,
       context: context,
-      initialTime: TimeOfDay(
-          hour: int.parse(_startTime.split(":")[0]),
-          minute: int.parse(_startTime.split(":")[1].split(" ")[0])),
+      initialTime: TimeOfDay(hour: hour, minute: minute),
     );
   }
 
@@ -270,9 +276,9 @@ class _AddTaskPageState extends State<AddTaskPage> {
                 padding: const EdgeInsets.only(right: 10, bottom: 20),
                 child: CircleAvatar(
                   backgroundColor: index == 0
-                      ? AppColors.pink
+                      ? AppColors.bluish
                       : index == 1
-                          ? AppColors.bluish
+                          ? AppColors.pink
                           : AppColors.yellow,
                   child: _selectedColor == index
                       ? const Icon(

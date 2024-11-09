@@ -1,3 +1,4 @@
+import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/res/image_res.dart';
@@ -18,17 +19,17 @@ class FirstPage extends StatelessWidget {
         children: [
           Lottie.asset(ImageRes.onboarding),
           const WhiteSpace(height: 100),
-          const FadingText(
-            'Todo with Riverpod',
+          FadingText(
+            'Todo with GetX',
             fontSize: 30,
             fontWeight: FontWeight.w500,
-            color: AppColors.white,
+            color: Get.isDarkMode ? AppColors.white : AppColors.darkGray,
             textAlign: TextAlign.center,
           ),
           const WhiteSpace(height: 10),
           Text(
             "Welcome!! Do you want to clear tasks super fast with Todo?",
-            style: GoogleFonts.poppins(
+            style: GoogleFonts.acme(
               fontSize: 16,
               fontWeight: FontWeight.normal,
               color: AppColors.lightGray,

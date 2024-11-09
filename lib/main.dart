@@ -5,7 +5,6 @@ import 'package:task_management/core/res/theme.dart';
 import 'package:task_management/data/db/db_helper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_management/services/theme_services.dart';
-import 'package:task_management/features/home/views/home_page.dart';
 import 'package:task_management/features/onboarding/views/onboarding_screen.dart';
 
 void main() async {
@@ -29,11 +28,11 @@ class MyApp extends StatelessWidget {
       },
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'Getx Task Management',
         theme: Themes.light,
         darkTheme: Themes.dark,
         themeMode: ThemeServices().theme,
-        home: const HomePage(),
+        home: const OnboardingScreen(),
       ),
     );
   }

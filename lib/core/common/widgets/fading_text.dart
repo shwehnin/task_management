@@ -26,7 +26,7 @@ class FadingText extends StatelessWidget {
       softWrap: false,
       overflow: TextOverflow.fade,
       textAlign: textAlign ?? TextAlign.left,
-      style: GoogleFonts.poppins(
+      style: GoogleFonts.acme(
         fontSize: fontSize,
         fontWeight: fontWeight ?? FontWeight.normal,
         color: color ?? AppColors.white,

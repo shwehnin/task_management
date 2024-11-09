@@ -5,7 +5,7 @@ import 'package:task_management/core/res/app_colors.dart';
 
 class CustomText {
   static TextStyle get subHeadingStyle {
-    return GoogleFonts.lato(
+    return GoogleFonts.acme(
       textStyle: TextStyle(
         fontSize: 24,
         fontWeight: FontWeight.bold,
@@ -15,7 +15,7 @@ class CustomText {
   }
 
   static TextStyle get headingStyle {
-    return GoogleFonts.lato(
+    return GoogleFonts.acme(
         textStyle: TextStyle(
       fontSize: 30,
       fontWeight: FontWeight.bold,
@@ -24,18 +24,18 @@ class CustomText {
   }
 
   static TextStyle get titleStyle {
-    return GoogleFonts.lato(
+    return GoogleFonts.acme(
         textStyle: TextStyle(
-      fontSize: 16,
+      fontSize: 18,
       fontWeight: FontWeight.w400,
       color: Get.isDarkMode ? AppColors.white : AppColors.darkBackground,
     ));
   }
 
   static TextStyle get subTitleStyle {
-    return GoogleFonts.lato(
+    return GoogleFonts.acme(
         textStyle: TextStyle(
-      fontSize: 14,
+      fontSize: 16,
       fontWeight: FontWeight.w400,
       color: Get.isDarkMode ? Colors.grey[100] : Colors.grey[400],
     ));

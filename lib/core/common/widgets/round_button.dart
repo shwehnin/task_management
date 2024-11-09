@@ -24,7 +24,7 @@ class RoundButton extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           text,
-          style: GoogleFonts.poppins(
+          style: GoogleFonts.acme(
               fontSize: 18,
               fontWeight: FontWeight.bold,
               color: AppColors.darkBackground),
